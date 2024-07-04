@@ -1,0 +1,432 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and navigation styles */
+.hero {
+    height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/sky.jfif");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent black overlay */
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8); /* Navigation background with transparency */
+}
+
+.logo {
+    margin-left: 20px; /* Adjusted margin to create space */
+}
+
+.logo h1 {
+    color: #333;
+    font-size: 28px; /* Increased font size for the logo */
+}
+
+.logo span {
+    color: #00ACC1; /* Light blue color for span */
+}
+
+nav {
+    margin-right: 20px; /* Adjusted margin to create space */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3fbac2; /* Light blue color on hover */
+}
+
+/* Content section styles */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px; /* Limit content width for better readability */
+    margin: 0 auto; /* Center align content */
+}
+
+.content h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FFBD33;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Card grid and card styles */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+}
+
+.card-img1 img {
+    width: 30%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.card p {
+    margin-bottom: 0;
+    text-align: left; /* Align paragraph text to the left */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #3fbac2; /* Change background color on hover */
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Card styles */
+.container-cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Light background for cards container */
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.row-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Table styles */
+table {
+    font-family: 'Josefin Sans', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto; /* Center the table */
+    margin-top: 20px; /* Adjust top margin */
+    border: 1px solid #BDB76B;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #BDB76B;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #EEE8AA;
+}
+
+/* Hero section for archive page */
+.hero3 {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/sky.jfif");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container for table in archive page */
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(240, 240, 240, 0.7); /* Light gray with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    z-index: 1; /* Ensure table is in front of hero */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Limit maximum width */
+}
+
+/* Button styles for pagination */
+.button3 {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3fbac2; /* Button background color */
+    color: white; /* Text color */
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button3:hover {
+    background-color: #33a3b0; /* Darker color on hover */
+}
+
+/* About section styles */
+.about-section {
+    background-color: #none;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-member {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 30px;
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.member-info p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: r/* About section styles */
+.about-section {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.team-member {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.member-info p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+elative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Hover effect for card descriptions */
+.card {
+    position: relative;
+}
+
+.card .card-description {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initially off-screen */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: #fff;
+    transition: left 0.3s ease-in-out;
+}
+
+.card:hover .card-description {
+    left: 0; /* Slide in from the left on hover */
+}
